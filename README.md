@@ -53,3 +53,11 @@ You should see output similar to the one below:
 <html><body>Hi there, I'm served from app-1.</body></html>
 <html><body>Hi there, I'm served from app-2.</body></html>
 ```
+
+## Cleanup
+In order to remove all the `VMs` just run the following in the repo's top level:
+```bash
+$ vagrant destroy
+```
+
+*Note: you'll have confirm the destruction by pressing `y`*
