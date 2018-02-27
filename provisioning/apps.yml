@@ -3,3 +3,14 @@
   apt:
     pkg: mtr
     state: latest
+
+- name: Copy app to temp
+  copy:
+    src: files/super-duper-app.py
+    dest: /tmp/app.py
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Run the app
+  shell: nohup python /tmp/app.py >/dev/null 2>&1 &
