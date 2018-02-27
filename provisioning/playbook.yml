@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: true
+  vars:
+    update: true
+    upgrade: true
+  tasks:
+    - include_tasks: common.yml
+
+- hosts: apps
+  become: true
+  tasks:
+    - include_tasks: apps.yml
+
+- hosts: lbs
+  become: true
+  tasks:
+    - include_tasks: lbs.yml

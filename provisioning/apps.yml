@@ -1,0 +1,5 @@
+---
+- name: Install mtr
+  apt:
+    pkg: mtr
+    state: latest

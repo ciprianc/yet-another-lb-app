@@ -1,0 +1,21 @@
+---
+- name: Update package repos
+  command: apt update
+  when: update
+
+- name: Upgrade packages
+  command: apt -y upgrade
+  when: upgrade
+
+- name: Install ntp
+  apt:
+    pkg: ntp
+    state: latest
+
+- name: Enable ntp
+  service:
+    name: ntp
+    state: started
+    enabled: true
+  notify:
+    - restart ntp
