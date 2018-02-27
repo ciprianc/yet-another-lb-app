@@ -17,3 +17,7 @@
   become: true
   tasks:
     - include_tasks: lbs.yml
+
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted
