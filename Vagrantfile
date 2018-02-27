@@ -37,8 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      "apps" => ["app-[1:2]"],
      "lbs" => ["lb"],
      "all_groups:children" => ["apps", "lb"],
-     "apps:vars" => {"variable1" => 9,
-                     "variable2" => "example"}
+     "lbs:vars" => {"upstreams" => ["192.168.50.10", "192.168.50.11"]}
     }
   end
 

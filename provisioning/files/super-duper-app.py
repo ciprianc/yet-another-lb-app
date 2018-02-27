@@ -11,7 +11,6 @@ class MyAppsHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 
         myhost = socket.gethostname()
 
-        s.wfile.write("<html><head><title>My super duper app.</title></head>")
         s.wfile.write("<body><p>Hi there, I'm served from {host}.</p>".format(host=myhost))
         s.wfile.write("</body></html>")
 

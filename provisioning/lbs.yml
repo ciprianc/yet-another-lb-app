@@ -3,3 +3,6 @@
   apt:
     pkg: nginx
     state: latest
+
+- name: Copy vhost template
+  template: src=files/vhost.conf.j2 dest=/etc/nginx/sites-available/default
